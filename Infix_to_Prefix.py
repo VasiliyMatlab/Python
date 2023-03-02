@@ -107,8 +107,37 @@ def infix_to_prefix(s: list) -> list:
         out.append(stack.pop())
     return out
 
-s = convert_to_correct_list(input())
-if not is_correct_infix(s):
-    raise ValueError
-s = delete_unary(s)
-print(infix_to_prefix(s))
+# Вычисление префиксного выражения
+def calculate_prefix(s: list[str]) -> float:
+    stack = list()
+    for el in s:
+        # Если число - кладем в стек
+        if el.isnumeric():
+            stack.append(float(el))
+            continue
+        # Операция - берем два числа из вершины стека,
+        # совершаем операцию, кладем результат в стек
+        num1 = float(stack.pop())
+        num2 = float(stack.pop())
+        match el:
+            case '+':
+                stack.append(num2 + num1)
+            case '-':
+                stack.append(num2 - num1)
+            case '*':
+                stack.append(num2 * num1)
+            case '/':
+                stack.append(num2 / num1)
+            case _:
+                raise ValueError(el)
+    return stack.pop()
+
+
+if __name__ == "__main__":
+    s = convert_to_correct_list(input())
+    if not is_correct_infix(s):
+        raise ValueError
+    s = delete_unary(s)
+    print(calculate_prefix(infix_to_prefix(s)))
+else:
+    print("It's not a module")
