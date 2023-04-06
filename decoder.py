@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 with open('code.txt', 'r') as inf:
     for line in inf:
         line = line.strip()

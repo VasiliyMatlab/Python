@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import threading
 
 b = threading.Barrier(3)    # Барьер

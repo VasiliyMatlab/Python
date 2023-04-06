@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -17,7 +19,7 @@ def hex2bin(a: str, n=0) -> str:
 def CFAR(Input: np.ndarray, guard: int, train: int, gain: float, value: float, mode: str) -> np.ndarray:
     if mode != "sum" and mode != "mean":
         raise ValueError
-    Treshold = np.array(zeros(len(Input)), np.float)
+    Treshold = np.array(zeros(len(Input)), float)
     for i in range(len(Input)):
         win = list(range(i-guard-train, i-guard)) + list(range(i+guard+1, i+guard+train+1))
         j = 0

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from time import process_time
 from os import getpid
 from psutil import Process

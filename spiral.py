@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Ввод размера спирали
 n = int(input())
 

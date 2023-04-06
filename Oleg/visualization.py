@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Подключение библиотек
 # Импортирование библиотеки построения графиков
 import matplotlib.pyplot as plt

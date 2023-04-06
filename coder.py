@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 st = input()
 string = list(st)
 s = [0]

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Импортирование функции вычисления мат. ожидания
 from statistics import mean
 

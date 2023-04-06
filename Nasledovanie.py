@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def IsParent(obj,class1,class2):
     if obj[class2] == ['None']:
         return 'No'
